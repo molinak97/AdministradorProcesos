@@ -137,6 +137,7 @@
             this.listview1.TabIndex = 0;
             this.listview1.UseCompatibleStateImageBehavior = false;
             this.listview1.View = System.Windows.Forms.View.Details;
+            this.listview1.DoubleClick += new System.EventHandler(this.button1_Click);
             // 
             // columnHeader1
             // 

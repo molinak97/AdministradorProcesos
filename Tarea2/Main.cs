@@ -27,11 +27,11 @@ namespace Tarea2
                 Thread.Sleep(100);               
                 Thread thread = new Thread(() => Process(tmp));                
                 ListViewItem item = new ListViewItem("Proceso #" + x);
-                item.SubItems.Add("READY");          
+                item.SubItems.Add("READY");              
                 listview1.Items.Add(item);
                 threads.Add(thread);
                 cola.Enqueue(thread);
-                //FIFO();
+                FIFO();
             }
             if (listview1.Items.Count != 0)
             {
@@ -89,7 +89,7 @@ namespace Tarea2
         private int Random()
         {
             Random random = new Random();
-            int rnd = random.Next(5000, 10000);
+            int rnd = random.Next(2000, 5000);
             return rnd;
         }
         private void Process(int x)
